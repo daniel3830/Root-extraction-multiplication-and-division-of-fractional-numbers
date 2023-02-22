@@ -1,0 +1,30 @@
+// Function to extract the root of a given number
+function extractRoot(number, root) {
+  return Math.pow(number, 1/root);
+}
+
+// Function to multiply two numbers
+function multiplyNumbers(a, b) {
+  return a * b;
+}
+
+// Function to divide two numbers
+function divideNumbers(a, b) {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return a / b;
+}
+
+// Example usage
+const num1 = 4;
+const num2 = 2;
+const root = 3;
+
+const extractedRoot = extractRoot(num1, root);
+const multiplied = multiplyNumbers(num1, num2);
+const divided = divideNumbers(num1, num2);
+
+console.log(`The ${root}th root of ${num1} is ${extractedRoot}`);
+console.log(`${num1} multiplied by ${num2} is ${multiplied}`);
+console.log(`${num1} divided by ${num2} is ${divided}`);
